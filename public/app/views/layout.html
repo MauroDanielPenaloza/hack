@@ -1,0 +1,23 @@
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">RAISER PREDICTOR</h1>
+      </md-toolbar>
+ <div ng-controller="NavbarController">
+  <md-content class="md-padding" md-whiteframe="1">
+    <md-nav-bar  md-selected-nav-item="currentNavItem"
+      nav-bar-aria-label="navigation links">
+      <md-nav-item md-nav-sref="app.prediccion"  name="app.prediccion">
+       Predicción
+      </md-nav-item>
+      <md-nav-item md-nav-sref="app.pronostico"  name="app.pronostico">
+       Pronostico
+      </md-nav-item>
+    </md-nav-bar>
+  </md-content>
+</div>
+ 
+  <div layout="row">
+    
+    <div flex>
+       <div ui-view style="width: 100%; height: 100%">
+    </div>
+  </div>

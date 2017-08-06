@@ -1,8 +1,8 @@
 
-angular.module('app').directive('customField', [function () {
+app.directive('custom', [function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'scripts/directives/custom-field/custom-field.directive.html',
+		templateUrl: 'app/directives/custom-field/custom-field.directive.html',
 		scope: {
 			field: '='
 		}, 

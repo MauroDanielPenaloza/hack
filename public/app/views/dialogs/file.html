@@ -1,0 +1,28 @@
+
+
+<md-dialog aria-label="Cargar Tabla" class="container" style="padding: 0;">
+	<form>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>
+					<b>Archivo</b>
+				</h2>
+				<span flex></span>
+				<md-button class="md-icon-button">
+					<span class="glyphicon glyphicon-remove"></span>
+				</md-button>
+			</div>
+		
+		</md-toolbar>
+		<md-dialog-content class="md-dialog-content-gray">
+			<div layout layout-sm="column">
+				
+				<lf-ng-md-file-input name="files00" lf-files="files09" lf-api="api09" lf-required lf-maxcount="5" lf-filesize="10MB" lf-totalsize="20MB"  single drag preview></lf-ng-md-file-input>
+
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions>
+			<md-button md-autofocus ng-click="Click_BtnAccion()">OK</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

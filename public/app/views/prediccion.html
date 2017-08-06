@@ -1,0 +1,63 @@
+
+
+
+<div layout="row">
+	
+<md-card flex="70">
+ <md-card-content style="    max-height: 37em;overflow-y: scroll;">
+ 	 <h1>Entrada de información de Valle</h1>
+	<div class= "envoltorio">
+	 <md-content layout-padding>
+
+		    <span  ng-repeat="input in inputsPred" ng-click="null" layout="column">
+		     <div flex style="    padding-top: 1em;">
+					<span>{{ input.name }}</span>	
+				</div>
+				<span layout="row">
+					<md-slider-container flex>
+						<md-slider  flex min="0" max="{{input.value * 2}}}" ng-change="ChangeSlider(input)" ng-model="input.value">
+						</md-slider>
+					</md-slider-container>
+					<div layout="column" flex="10" style="    padding-top: 1em;">
+						<div flex><em> <b>
+							<md-input-container flex ng-if="type!='checkbox'">
+				 				 <input type="number" ng-model="input.value"
+				 				 style="-webkit-appearance: none; margin: 0; " 
+				 				 >
+							</md-input-container>
+								
+							</b></em>
+						</div>
+					</div>	
+				</span>
+
+			</span>
+	 </md-content>	 
+	</div>
+ </md-card-content>
+ </md-card>
+
+
+
+
+
+
+<md-card flex="30"> <!--  -->
+ <md-card-content style="overflow-x: hidden;"> 
+ 	 <h1>Prediccion de Mañana</h1>
+	<div class= "envoltorio">
+	 <md-content layout-gt-sm="row" layout-padding style="overflow-x: hidden;">
+	    <div layout="row" layout-wrap >
+	        <div flex="50">
+				<div id="chart_div" style="    height: 400px;"></div>
+			</div>
+	    </div>
+	 </md-content>	 
+	</div>
+ </md-card-content>
+</md-card>
+
+
+</div>
+
+

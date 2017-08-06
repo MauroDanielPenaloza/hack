@@ -19,5 +19,6 @@ var app = angular.module('app', [
     'ngMaterial',
     'ngStorage',
     'ui.router',
-    'oc.lazyLoad'
+    'oc.lazyLoad',
+    'md.data.table'
   ]);

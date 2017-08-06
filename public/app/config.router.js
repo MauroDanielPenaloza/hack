@@ -7,8 +7,8 @@
  * # Config
  * Config for the router
  */
-angular.module('app')
-  .run(
+var app=angular.module('app');
+  app.run(
     [           '$rootScope', '$state', '$stateParams',
       function ( $rootScope,   $state,   $stateParams ) {
         $rootScope.$state = $state;
@@ -16,9 +16,9 @@ angular.module('app')
       }
     ]
   )
-  .config(['$stateProvider', '$urlRouterProvider', 'MODULE_CONFIG', function ( $stateProvider,   $urlRouterProvider,  MODULE_CONFIG ) {
+  app.config(['$stateProvider', '$urlRouterProvider', 'MODULE_CONFIG', function ( $stateProvider,   $urlRouterProvider,  MODULE_CONFIG ) {
       $urlRouterProvider
-          .otherwise('/dash');
+          .otherwise('/prediccion');
            $stateProvider
          .state('app', {
             abstract: true,
@@ -28,14 +28,27 @@ angular.module('app')
                 templateUrl: 'app/views/layout.html'
               }
             }
+           
           })
-          .state('app.dash', {
-              url: '/dash',
-              templateUrl: 'app/views/dash.html',
+          .state('app.prediccion', {
+              url: '/prediccion',
+              templateUrl: 'app/views/prediccion.html',
               controller: 'DashController',
-              resolve: load(['app/controllers/DashController.js', 'app/directives/custom-field/custom-field.directive.js'])
+              resolve: load(['lfNgMdFileInput','ui.grid'])
             })
-        /*  .state('app.control', {
+          .state('app.pronostico', {
+              url: '/pronostico',
+              templateUrl: 'app/views/pronostico.html',
+              controller: 'DashController',
+              resolve: load(['lfNgMdFileInput','ui.grid'])
+            })
+           .state('app.salida', {
+              url: '/salida',
+              templateUrl: 'app/views/salida.html',
+              controller: 'SalidaController',
+              resolve: load([])
+            })
+          /*  .state('app.control', {
               url: '/admin',
               templateUrl: 'app/views/admin.html',
               controller: 'AdminController',

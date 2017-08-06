@@ -5,19 +5,18 @@ var express     = require('express');
 var app         = express();
 var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
-var mongoose    = require('mongoose');
+//var mongoose    = require('mongoose');
 var crypto 		= require('crypto');
 
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
-var User   = require('./app/models/user'); // get our mongoose model
-var Client   = require('./app/models/client'); // get our mongoose model
+
     
 // =======================
 // configuration =========
 // =======================
 var port = process.env.PORT || 5000; // used to create, sign, and verify tokens
-mongoose.connect(config.database); // connect to database
+//mongoose.connect(config.database); // connect to database
 app.set('superSecret', config.secret); // secret variable
 
 // use body parser so we can get info from POST and/or URL parameters
@@ -61,7 +60,7 @@ app.get('/', function(req, res) {
 var apiRoutes = express.Router(); 
 
 // route to authenticate a user (POST http://localhost:8080/api/authenticate)
-apiRoutes.post('/authenticate', function(req, res) {
+/*apiRoutes.post('/authenticate', function(req, res) {
 	console.log("req: "+ JSON.stringify(req.body));
   // find the user
   User.findOne({
@@ -227,7 +226,7 @@ apiRoutes.route('/clients/:client_id')
             res.json({ message: 'Alumno eliminado correctamente', success: true });
         });
     });
-// apply the routes to our application with the prefix /api
+// apply the routes to our application with the prefix /api*/
 app.use('/api', apiRoutes); 
 
 // =======================

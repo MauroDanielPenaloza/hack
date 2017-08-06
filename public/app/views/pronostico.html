@@ -1,0 +1,66 @@
+<md-card>
+ <md-card-content>
+ 	 <h1>Datos Operacionales de planificación</h1>
+	<div class= "envoltorio">
+	 <md-content layout-gt-sm="row" layout-padding>
+	    <md-table-container>
+			  <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+			    <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+			      <tr md-row>
+			        <th md-column><span>
+			        Dia</span></th>
+			        <th md-column   >AASR Riser</th>
+			        <th md-column >PLS Irrigation
+			        </th>
+			        <th md-column >Barren Irrigation
+			        </th>
+			        <th md-column > Flow to Process Plant
+			        </th>
+			        <th md-column > Moisture of Rock
+			        </th>
+			        <th md-column >Mineral Placedin VLF
+			        </th>
+			       
+			      </tr>
+			    </thead>
+			    <tbody md-body>
+			      <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in registrosflow">
+			        <td md-cell>{{dessert.t  | date : format : timezone}}</td>
+			        <td md-cell>{{dessert.AASRRiser}}</td>
+			        <td md-cell>{{dessert.PLSIrrigation}}</td>
+			        <td md-cell>{{dessert.BarrenIrrigation}}</td>
+			        <td md-cell>{{dessert.FlowtoProcessPlant}}</td>
+			        <td md-cell>{{dessert.MoistureofRock}}</td>
+			        <td md-cell>{{dessert.MineralPlacedinVLF}}</td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</md-table-container>
+	 </md-content>	 
+	</div>
+ </md-card-content>
+ <md-card-actions layout="row" layout-align="end center">
+ 	<md-button class="md-raised md-hue-2" ng-click="ClickPronosticar()">Pronosticar</md-button>
+   <md-button class="md-primary md-raised md-hue-2" ng-click="ClickBtnAddFile()">Cargar Archivo</md-button>
+ </md-card-actions>
+</md-card>
+<md-card style="min-height: 400px;"  >
+	<h1>Pronostico</h1>
+ <md-card-content style="min-height: 400px;  min-width: 100%; padding-bottom:0; " >
+   <div id="timeline" style="min-height: 400px; min-width: 100%;"></div>
+ </md-card-content>
+</md-card>
+
+<md-card>
+
+<md-card> <!-- ng-show="mostrarSalida"  -->
+ <md-card-content>
+ 	 <h1>Pronostico</h1>
+
+	<div layout="row">
+		 <div flex>
+			<div id="line_top_x" style="height: 400px; width: 400px"></div>	
+		</div>
+	</div>
+ </md-card-content>
+</md-card>

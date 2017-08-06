@@ -17,23 +17,15 @@
   <link rel="stylesheet" href="libs/styles/font.css" type="text/css" />
   <link rel="stylesheet" href="libs/styles/app.css" type="text/css" />
   <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
+  <link rel="stylesheet" href="libs/angular/mdtable/md-data-table.css" type="text/css"/>
 </head>
 
-<body>
-    <main>
-        <div ng-controller="AppCtrl" ui-view style="width: 100%">
-            
-        <div class="flexbox-parent" >
-            
-        </div>
-        </div>
-    </main>
-  
+<body style="height: 100%">
+    <div ng-controller="AppCtrl" ui-view style="width: 100%; height: 100%;">
     <div id="divfooter">
         <footer>
-            
-            <script src="libs/google/loader.js"></script>
             <script src="libs/jquery/jquery/dist/jquery.js"></script>
+            <script src="libs/google/loader.js"></script>
             <script src="libs/angular/angular/1.6/angular.js"></script>
             <script src="libs/angular/angular-animate/1.6/angular-animate.js"></script>
             <script src="libs/angular/angular-aria/1.6/angular-aria.js"></script>
@@ -47,12 +39,16 @@
             <script src="libs/angular/ngstorage/ngStorage.js"></script>
             <script src="libs/angular/angular-ui-utils/ui-utils.js"></script>
             <script src="libs/angular/oclazyload/dist/ocLazyLoad.js"></script>
+            <script src="libs/angular/mdtable/md-data-table.min.js"></script>
             <script src="libs/angular/angular-loading-bar/build/0.9.0/loading-bar.js"></script>
             <script src="app/app.js"></script>
+            <script src="app/controllers/navbarController.js"></script>
             <script src="app/config.js"></script>
             <script src="app/config.lazyload.js"></script>
             <script src="app/config.router.js"></script>
             <script src="app/controllers/AppCtrl.js"></script>
+            <script src="app/directives/custom-field/custom-field.directive.js"></script>
+            <script src="app/controllers/DashController.js"></script>
         </footer>
     </div>
 </body>
