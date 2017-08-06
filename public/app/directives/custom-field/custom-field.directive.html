@@ -1,0 +1,23 @@
+<md-input-container flex ng-if="type!='checkbox'">
+    <label>{{field.vDisplay}}</label>
+    <input 
+    	name="{{field.name}}"
+		type="{{type}}" 
+    	ng-model="field.value"
+    	ng-required="field.validations.required"
+    	ng-maxlength="field.validations.maxLength"
+    	ng-minlength="field.validations.minLength"
+    	ng-pattern="field.validations.pattern"
+    	>
+</md-input-container>
+
+  	<md-checkbox flex
+
+   		aria-label="Checkbox 1 " 
+   		ng-if="type=='checkbox'"
+   		ng-model="field.value"
+   		ng-required="field.validations.required"
+   		style="margin-top: 28px"
+   		>
+            {{field.vDisplay}}
+  	</md-checkbox>

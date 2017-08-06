@@ -1,0 +1,26 @@
+
+<div class="card-inmo" flex>
+	<div class="card-img-container">
+		<carrousel-nebula collection="entitie.fotos"></carrousel-nebula>
+	</div >
+	<div class="card-info-container">
+		<ul class="card-list">
+			<li class="card-list-item">
+				<a class="card-link">{{entitie.direccion.calle}}-{{entitie.direccion.numero}}</a>
+
+			</li>
+			<li class="card-list-item">
+				<span class="card-list-info-title">Departamento</span>
+				<span class="card-list-info">{{entitie.direccion.departamento}}</span>
+			</li>
+			<li class="card-list-item">
+				<span class="card-list-info-title">Provincia</span>
+				<span class="card-list-info">{{entitie.direccion.provincia}}</span>
+			</li>
+		</ul>
+		<button md-ink-ripple  class="md-btn btn-stroke md-raised m-b white" ng-click="Click_BtnAccion()" style="float:right;
+    background: #fff;">{{entitie.accion}}</button>       
+	</div>
+</div>
+
+

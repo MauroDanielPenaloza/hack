@@ -1,0 +1,24 @@
+
+<md-card>
+ <md-card-content>
+	<h2>Ingrese su rimer Local</h2>
+	<div class= "envoltorio">
+	 <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+	    <div layout-row >
+	      <md-input-container flex>
+	        <label>Nombre</label>
+	        <input ng-model="NuevoLocal.nombre">
+	      </md-input-container flex>
+
+	      <md-input-container>
+	        <label>Ubicacion</label>
+	        <input ng-model="NuevoLocal.ubicacion">
+	      </md-input-container>
+	    </div>
+	 </md-content>	 
+	</div>
+ </md-card-content>
+ <md-card-actions layout="row" layout-align="end center">
+   <md-button class="md-warn md-raised md-hue-2" ui-sref="admin">Continuar</md-button>
+ </md-card-actions>
+</md-card>

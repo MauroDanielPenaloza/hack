@@ -1,0 +1,42 @@
+.card-inmo{
+   background-color: #fff;
+   margin-right: 5px;
+   margin-left: 5px;
+}
+.card-inmo > .card-img-container{
+ text-align: center;
+    background: #dadada;
+}
+.card-inmo > .card-info-container{
+ padding-top: 18px;
+    padding-bottom: 10px;
+}
+.card-list{
+  padding-left: 10px;
+}
+.card-item{
+display: block;
+}
+.card-link{
+ display: block;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #565353;
+    vertical-align: top;
+    text-decoration: none;
+}
+.card-link:hover{
+    text-decoration: underline;
+}
+.card-list-item{
+	  display: block;
+    font-size: 11px;
+}
+.card-list-info-title{
+ color: #565353;
+}
+.card-list-info{
+	color: #2196f3;
+    font-style: italic;
+}

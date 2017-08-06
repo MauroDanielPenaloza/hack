@@ -1,0 +1,44 @@
+
+<md-card>
+ <md-card-content>
+	<h2>Usuario Administrador</h2>
+	<div class= "envoltorio">
+	 <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+	    <div layout="row" layout-wrap >
+	      <md-input-container flex="33">
+	        <label>Nombre</label>
+	        <input ng-model="admin.nombre">
+	      </md-input-container>
+
+	      <md-input-container flex="33">
+	        <label>Apellido</label>
+	        <input ng-model="admin.apellido">
+	      </md-input-container>
+	      <md-input-container flex="33">
+	        <label>D.N.I.</label>
+	        <input ng-model="admin.dni">
+	      </md-input-container>
+	      <md-input-container flex="33">
+	        <label>Username</label>
+	        <input ng-model="admin.username">
+	      </md-input-container>
+	      <md-input-container flex="33">
+	        <label>Mail</label>
+	        <input ng-model="admin.mail" type="mail">
+	      </md-input-container>
+	      <md-input-container flex="33">
+	        <label>Contraseña</label>
+	        <input ng-model="admin.password" type="password">
+	      </md-input-container>
+	      <md-input-container flex="33">
+	        <label>Repetir Contraseña</label>
+	        <input ng-model="password" type="password">
+	      </md-input-container>
+	    </div>
+	 </md-content>	 
+	</div>
+ </md-card-content>
+ <md-card-actions layout="row" layout-align="end center">
+   <md-button class="md-warn md-raised md-hue-2" ng-click="Save()">Guardar</md-button>
+ </md-card-actions>
+</md-card>

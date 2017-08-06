@@ -1,0 +1,53 @@
+.card-btn{
+    opacity: 0.2;
+    bottom: 0;
+    padding-top: 23%;
+    transition: Opacity 0.7s ease-in-out;
+    color: aliceblue !important;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+}
+.carrousel-container{
+    position: relative;
+    min-height: 8em;
+    min-width: 14em;
+    overflow: hidden;
+}
+.card-btn:hover{
+opacity: 1;
+ color:aliceblue;
+}
+.card-btn-carrousel-right{
+background: -moz-linear-gradient(right, rgba(23, 150, 243, 0.08) 0%,rgba(33, 150, 243, 0.1) 14%,rgba(125,185,232,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(right, rgba(23, 150, 243, 0.08) 0%,rgba(33, 150, 243, 0.1) 14%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to left, rgba(23, 150, 243, 0.08) 0%,rgba(33, 150, 243, 0.1) 14%,rgba(125,185,232,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 */
+right: 0;
+}
+.card-btn-carrousel-left{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+37,1e5799+37,7db9e8+100&1+0,0+100 */
+background: -moz-linear-gradient(left, rgba(23, 150, 243, 0.08) 0%, rgba(33, 150, 243, 0.1) 14%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(23, 150, 243, 0.08) 0%,rgba(33, 150, 243, 0.1) 14%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(23, 150, 243, 0.08) 0%,rgba(33, 150, 243, 0.1) 14%,rgba(125,185,232,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+left: 0;
+}
+
+.carrousel-img{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove{
+    transition: all linear 1s;
+}
+.animate-show.ng-hide-remove{
+    opacity: 0;
+}
+.animate-show.ng-hide-add{
+    opacity: 1;   
+}
